@@ -1,0 +1,717 @@
+@charset "utf-8";
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+
+html,body {
+    font-size: 100%;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+#content {
+    display: flex;
+}
+.wrapper {
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 100vh 0 0;
+    color: #fff;
+    text-align: center;
+}
+.inner {
+    max-width: 860px;
+    margin: 0 auto;
+}
+.sp-only {
+    display: none;
+}
+.pc-only {
+    display: block;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.video-background {
+    position: fixed;  
+    left: 300px;   
+    overflow: hidden; 
+    z-index: -1;
+    height: 100vh;
+    width: calc(100% - 300px);
+}
+.video-background video {
+    position: absolute;
+    height: 100vh;
+    object-fit: cover;
+    left: 0;
+    transform-origin: left center;
+} 
+.main-area {
+    z-index: 1;
+    position: relative;
+    margin-left: 300px;
+    width: calc(100% - 300px);
+}
+.gd {
+    background: linear-gradient(
+  to top,
+  #000000cc 0%,
+  #000000cc 60%,       
+  #505050b3 80%,       
+  #5454544d 92%,      
+  transparent 100%   
+);
+}
+/*-------------------------------------
+header
+-------------------------------------*/
+#header-pc {
+    width: 300px;
+    padding: 45px 45px;
+    height: 100vh;
+    z-index: 2;
+    position: fixed;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+#header-pc .site-title {
+    padding-bottom: 41px;
+}
+#header-pc .navi {
+    font-size: 14px;
+    margin-bottom: 84px;
+}
+#header-pc .navi li {
+    margin-bottom: 23px;
+}
+#header-pc .social-links li {
+    font-size: 14px;
+    margin-bottom: 23px;
+}
+#header-pc .social-links a {
+    color: #000;
+}
+/*-------------------------------------
+project-list
+-------------------------------------*/
+.project-list {
+    padding: 0 20px;
+}
+.project-list .inner {
+    max-width: 860px;
+    margin: 0 auto;
+}
+.section-title {
+    max-width: 860px;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 69px 0;
+}
+.section-title::before {
+    content: "";
+    border-bottom: solid 1px #fff;
+    flex: 1; 
+    margin: 0 30px 0 0;
+}
+.section-title::after {
+    content: "";
+    border-bottom: solid 1px #fff;
+    flex: 1; 
+    margin: 0 0 0 30px;
+}
+.project-list ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 56px;
+    margin-bottom: 150px;
+}
+.project-list li {
+    height: auto;
+    width: 100%;
+}
+
+.project-list ul img {
+    border: solid 1.5px #fff;
+    width: 100%;
+}
+.project-list a {
+    position: relative;
+    display: block;
+}
+.project-list ul p {
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    bottom: 10;
+    left: 8;
+    z-index: 2;
+}
+.project-list ul li a::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+}
+/*-------------------------------------
+features
+-------------------------------------*/
+.features {
+    padding: 0 20px;
+}
+.features ul {
+    display: flex;
+    justify-content: center;
+    gap: 43px;
+    padding-bottom: 150px;
+}
+.features li {
+    width: 100%;
+}
+.features ul h3 {
+    font-size: 16px;
+    margin-top: 18px;
+}
+.features ul p {
+    font-size: 14px;
+    margin-top: 13px;
+}
+.features ul a {
+    position: relative;
+    color: #fff;
+    border: solid 1px #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    z-index: 0;
+    aspect-ratio: 1 / 1
+  }
+  
+  .features ul a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.3;
+    transition: transform 0.5s ease;
+    transform: translateX(0);
+    z-index: -1;
+  }
+  .features ul a:hover::before {
+    transform: translateX(100%);
+  }
+/*-------------------------------------
+workflow
+-------------------------------------*/
+.workflow {
+    background-color: #fff;
+    color: #121212;
+    padding: 0 20px;
+}
+.workflow .section-title {
+    color: #121212;
+}
+.workflow .section-title::before,
+.workflow .section-title::after {
+    border-bottom: solid 1px #121212;
+}
+.workflow h4 {
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 65px;
+    font-weight: normal;
+}
+.workflow .step {
+    display: flex;
+    gap: 0 80px;
+}
+.workflow ul {
+    position: relative;
+    flex-direction: column;
+}
+.workflow .step li {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin-bottom: 50px;
+}
+.workflow .step li::before {
+    content: attr(data-label);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #414141;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.workflow .step li::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 20px solid #414141;
+}
+.workflow dl {
+    text-align: left;
+}
+.workflow dt {
+    font-size: 20px;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    position: relative;
+    border-bottom: solid 1px #121212;
+}
+.workflow dd {
+    padding-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.workflow dt span {
+    position: absolute;
+    background-color: #414141;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -50px;
+    top: 0;
+}
+.workflow ul::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 85%;
+    top: 0;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%);
+    border: solid 30px #FFDD00;
+}
+/*-------------------------------------
+contact
+-------------------------------------*/
+.contact {
+    background-color: #fff;
+    color: #121212;
+    padding: 0 20px;
+}
+.contact .section-title {
+    color: #121212;
+}
+.contact .section-title::before,
+.contact .section-title::after {
+    border-bottom: solid 1px #121212;
+}
+.contact h4 {
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 65px;
+    font-weight: normal;
+}
+.contact .contact-link {
+    display: flex;
+    justify-content: center;
+    gap: 43px;
+    padding-bottom: 160px;
+}
+.contact .contact-link li {
+    border: solid 1px #121212;
+    width: 258px;
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+.contact .contact-link li:hover {
+    outline: solid 3px #121212;
+}
+.contact .contact-link li::after {
+    content: '';
+    position: absolute;
+    bottom: 5;
+    right: 5;
+    border-left: solid 25px transparent;
+    border-bottom: solid 25px #121212;
+}
+.contact .contact-link a {
+    color: #121212;
+}
+.contact .contact-link img {
+    margin-bottom: 8px;
+}
+/*-------------------------------------
+footer
+-------------------------------------*/
+footer {
+    color: #fff;
+    background-color: #121212;
+    text-align: center;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    padding: 53px 0 68px 0;
+    flex-wrap: wrap;
+}
+footer li {
+    font-size: 14px;
+    padding: 0 20px;
+    margin: 0 0 20px 0;
+}
+footer li:not(:last-child) {
+    border-right: solid 1px #fff;
+}
+footer p {
+    font-size: 12px;
+    padding-bottom: 22px;
+}
+/*-------------------------------------
+totop
+-------------------------------------*/
+#totop {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+#totop .arrow {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+#totop .arrow::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 0;
+    right: 0;
+    border: solid 1px #fff;
+    background-color: #121212;
+    border-radius: 50%;
+    z-index: 3;
+}
+#totop .arrow::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 22px;
+    right: 17px;
+    border-bottom: solid 10px #fff;
+    border-left: solid 8px transparent;
+    border-right: solid 8px transparent;
+    z-index: 4;
+}
+/*-------------------------------------
+SP
+-------------------------------------*/
+@media screen and (max-width: 960px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .sp-only {
+        display: block;
+    }
+    .pc-only {
+        display: none !important;
+    }
+    .content {
+        display: block;
+    }
+    .wrapper {
+        padding: 550px 0 0 0;
+    }
+    .main-area {
+        width: 100%;
+        margin-left: 0;
+    }
+    #header-sp {
+        display: flex;
+        position: fixed;
+        z-index: 2;
+        background-color: #fff;
+        width: 100%;
+        height: 72px;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
+    .video-background {
+        width: 100%;
+        top: 50px;
+        left: 0;
+        height: 530px; 
+        overflow: hidden; 
+    }
+    .video-background video {
+        height: 530px;
+        width: auto;
+        object-fit: unset;
+        transform: none !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    #header-sp .site-title {
+        width: 180px;
+        height: 52px;
+    }
+    .burger {
+       width: 30px;
+       height: 22px;
+       position: relative;
+       cursor: pointer;
+       z-index: 10;
+    }
+    .burger.is-active span {
+        background-color: #fff;
+    }
+    .burger.is-active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger.is-active span:nth-child(2) {
+        opacity: 0;
+    }
+    .burger.is-active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    .burger span {
+        display: block;
+        height: 2px;
+        background-color: #333;
+        margin: 6px 0;
+        border-radius: 2px;
+        transition: 0.4s;
+    }
+    .menu {
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff; 
+        padding: 30px 150px 30px 30px;
+        z-index: 5;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .menu.is-active {
+        left: 0;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .navi-list {
+        font-size: 15px;
+        margin-bottom: 60px;
+    }
+    .navi-list li {
+        padding-bottom: 30px;
+    }
+    .social-links li {
+        padding-bottom: 30px;
+    }
+    .social-links a {
+        font-size: 15px;
+        color: #121212;
+    }
+    .bk {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        overflow-x: hidden;
+    }
+    .bk.is-active {
+        display: flex;
+    }
+    .section-title {
+        font-size: 20px;
+        padding-bottom: 30px;
+    }
+    .project-list ul {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .features ul {
+        gap: 18px;
+    }
+    .workflow h4 {
+        line-height: 1.5;
+    }
+    .workflow .step li {
+        padding: 33px 0;
+        width: 100%;
+        height: 30px;
+        margin-bottom: 60px;
+    }
+    .workflow .step {
+        display: block;
+        overflow: hidden;
+    }
+    .workflow dl {
+        padding-left: 50px;
+    }
+    .contact h4 {
+        font-size: 16px;
+    }
+    .contact .contact-link {
+        flex-direction: column;
+    }
+    .contact .contact-link li  {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .workflow .step li::after {
+        border-left: calc(50vw - 20px) solid transparent;
+        border-right: calc(50vw - 20px) solid transparent;
+        border-top: 30px solid #414141;
+
+    }
+
+}
+@media screen and (max-width: 2000px) and (min-width: 1129px) {
+    .workflow dt {
+        margin-bottom: 40px;
+    }
+}
