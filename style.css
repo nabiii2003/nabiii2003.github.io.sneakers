@@ -107,6 +107,9 @@ html,body {
     line-height: 1.5;
     letter-spacing: 1;
 }
+body {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+}
 a {
     text-decoration: none;
 }
@@ -151,7 +154,6 @@ nav
     transform: translateX(-50%) scale(0.85);
     color: #fff;
     background-color: #121212;
-    z-index: 10;
     padding: 50px 20px;
     width: 50%;
     transition: opacity 0.4s ease, transform 0.4s ease;
@@ -159,6 +161,7 @@ nav
 .menu.is-active {
     opacity: 1;
     transform: translateX(-50%) scale(1);
+    z-index: 1000;
 }
 .menu h3 {
     font-size: 20px;
@@ -208,19 +211,18 @@ nav ul a {
     background-color: rgba(0, 0, 0, 0.8);
     top: 0;
     right: 0;
-}
-.bg-black {
-    opacity: 0;
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 999;
 }
 .menu,
 .bg-black {
-  opacity: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 .menu.is-active,
 .bg-black.is-active {
-  opacity: 1;
+    pointer-events: auto;
+    opacity: 1;
 }
 
 /*-------------------------------------
@@ -352,7 +354,6 @@ contact
 }
 .contact-form {
     position: relative;
-    z-index: 1000;
     pointer-events: auto; 
 }
 /*-------------------------------------
@@ -405,4 +406,5 @@ SP
     }
     
 }
+
 
